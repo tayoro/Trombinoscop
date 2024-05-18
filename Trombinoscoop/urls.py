@@ -25,14 +25,14 @@ urlpatterns = [
     #   name = 'login'  consite a appeler les liens dans page.html dans les form avec l'attribut action = 'login'
     # url('pour appele dans les liens ', fonction, pour appler dans  )
     url(r'^$', welcome),
-    url(r'^login$', login , name = 'login'),
+    url(r'^login/$', login, name= 'login'),
     url(r'^welcome$', welcome , name= 'welcome'),
-    url(r'^register$', register, name = 'register'),
+    url(r'^register/$', register, name = 'register'),
     url(r'^addFriend$', add_friend, name = 'addFriend'),
-    url('^showProfile$', show_profile),
-    url('^modifyProfile$', modify_profile, name='modifyprofile'),
+    url(r'^showProfile$', show_profile),
+    url(r'^modifyProfile$', modify_profile, name='modifyprofile'),
     url(r'^delete_friend_request/(?P<id>\d+)/$', delete_friend_request, name='delete_friend_request'),
     url(r'^logout$', logout , name='logout' ),
-    url('^ajax/checkEmailField$', ajax_check_email_field),
+    url(r'^ajax/checkEmailField$', ajax_check_email_field),
     url(r'^admin/', admin.site.urls),
 ]
